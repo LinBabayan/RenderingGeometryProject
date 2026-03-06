@@ -20,7 +20,7 @@ The goal of the project is to explore parametric curve and surface discretizatio
 
 ---
 
-### Bézier Surface (Bonus)
+### Bézier Surface 
 
 - Implementation of a **Bézier surface patch**
 - Surface discretization using **uniform sampling in parametric space (u, v)**
