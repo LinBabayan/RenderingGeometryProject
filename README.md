@@ -11,8 +11,8 @@ The goal of the project is to explore parametric curve and surface discretizatio
 
 ### Bézier Curve
 
-- Implementation of Bézier curves using **Bernstein polynomials**
-- **Uniform parametric discretization** based on a user-defined number of segments
+- Implementation of Bézier curves using Bernstein polynomials
+- Uniform parametric discretization based on a user-defined number of segments
 - Visualization of:
   - Bézier curve
   - Control polygon
@@ -22,13 +22,13 @@ The goal of the project is to explore parametric curve and surface discretizatio
 
 ### Bézier Surface 
 
-- Implementation of a **Bézier surface patch**
-- Surface discretization using **uniform sampling in parametric space (u, v)**
-- Triangle mesh generation for rendering
+- Implementation of a Bézier surface patch
+- Surface discretization using uniform sampling in parametric space (u, v)
+- Triangle mesh generation for surface rendering
 - Each vertex stores:
-  - **Position**
-  - **Normal**
-  - **Parametric coordinates (u, v)**
+  - Position
+  - Normal
+  - Parametric coordinates (u, v)
 
 ---
 
@@ -36,15 +36,15 @@ The goal of the project is to explore parametric curve and surface discretizatio
 
 The surface can be visualized in three different modes:
 
-1. **Shaded surface rendering**
-2. **Surface normals visualization**
-3. **Parametric (UV) visualization**
+1. Shaded surface rendering
+2. Surface normals visualization
+3. Parametric (UV) visualization
 
 ---
 
 ## Rendering
 
-The application uses the **modern OpenGL pipeline** and includes:
+The application uses the modern OpenGL pipeline and includes:
 
 - Phong lighting model
 - Real-time rendering
@@ -55,16 +55,16 @@ The application uses the **modern OpenGL pipeline** and includes:
 
 ## Interactive Features
 
-- Adjustable Bézier **curve resolution**
-- Adjustable Bézier **surface resolution**
-- **Wireframe rendering toggle**
+- Adjustable Bézier curve resolution
+- Adjustable Bézier surface resolution
+- Wireframe rendering toggle
 
 ---
 
 ## Controls
 
 | Key | Function |
-|----|----|
+|-----|----------|
 | W A S D | Move camera |
 | Mouse | Rotate camera |
 | Scroll | Zoom |
@@ -79,3 +79,58 @@ The application uses the **modern OpenGL pipeline** and includes:
 ---
 
 ## Project Structure
+
+RenderingGeometryProject
+│
+├── src  
+│   Source files
+│
+├── include  
+│   Header files
+│
+├── shaders  
+│   GLSL shader programs
+│
+├── external  
+│   External dependencies (GLAD)
+│
+└── CMakeLists.txt
+
+---
+
+## Compilation
+
+### Requirements
+
+- C++ compiler
+- CMake
+- OpenGL
+- GLFW
+- GLM
+
+### Install dependencies (Ubuntu)
+
+sudo apt install build-essential cmake libglfw3-dev libglm-dev libgl1-mesa-dev
+
+### Build the project
+
+mkdir build  
+cd build  
+cmake ..  
+make
+
+### Run the program
+
+./RenderingGeometryProject
+
+---
+
+## Scene Overview
+
+The application renders three main elements in the scene:
+
+- A rotating cube with Phong lighting
+- A Bézier curve with its control polygon and control points
+- A Bézier surface patch with multiple visualization modes
+
+The camera can freely navigate the scene to inspect the geometry and rendering results.
